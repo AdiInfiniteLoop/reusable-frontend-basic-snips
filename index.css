@@ -1,0 +1,42 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.container-carousel {
+  width: 80%;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  animation: slide 6s infinite;
+}
+
+.carousel-item {
+  flex: 0 0 100%; 
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s ease-in;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-100%);
+  }
+  66.66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
